@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300&display=swap');
+
+:root {
+    --primary-color: #4B9093;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 500px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.8px);
+    -webkit-backdrop-filter: blur(13.8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.container h1 {
+    font-size: 32px;
+    margin-top: -5%;
+    margin-bottom: 10%;
+}
+
+.container input {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    padding-left: 10px;
+    font-size: 18px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container input:focus {
+    background-color: #204f8d10;
+    border: none;
+}
+
+.container .btn-add {
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container .btn-add:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    transition: all 300ms ease-out;
+}
+
+.tarefas::-webkit-scrollbar {
+    width: 22px;
+}
+
+.tarefas::-webkit-scrollbar-track {
+    background: rgb(45, 81, 105, 0.5);
+    border-radius: 15px;
+}
+
+.tarefas::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 20px;
+}
+
+
+.tarefas {
+    width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
+    margin-top: 8%;
+}
+
+.tarefas li {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    list-style: none;
+}
+
+.buttonApagar {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    background-color: #e43c3c;
+    background-image: url('../images/iconDel.svg');
+    color: #ffffff;
+}
+
+.buttonApagar:hover {
+    background-color: #911d1d;
+    transition: all 200ms ease-in-out;
+}
+
+@media (max-width: 480px) {
+    .container{
+       width: 250px; 
+    }
+
+    .btn-add {
+        margin-top: 10px
+    }
+}
